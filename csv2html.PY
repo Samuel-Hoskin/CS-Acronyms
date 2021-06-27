@@ -7,6 +7,7 @@ webpage = urllib.request.urlopen(url)
 datareader = csv.reader(io.TextIOWrapper(webpage))
 data = list(datareader)
 txt = open('data.txt', 'a')
+
 for row in data:
 
     a = (row[0])
