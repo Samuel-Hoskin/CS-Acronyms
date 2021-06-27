@@ -6,6 +6,7 @@ url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSf5yPnrU5Z_iIP7L3op6deIm
 webpage = urllib.request.urlopen(url)
 datareader = csv.reader(io.TextIOWrapper(webpage))
 data = list(datareader)
+txt = open('data.txt', 'a')
 for row in data:
 
     a = (row[0])
@@ -22,4 +23,5 @@ for row in data:
     se = ("],")
 
     x = first + a + second + end + b + end2 + end + c + end2 + end + d + end2 + end + e + end2
+    txt.write(x)
     print (x)
