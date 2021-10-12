@@ -16,6 +16,10 @@ for row in data:
     d = (row[3])
     e = (row[4])
 
+    y = len(c) - 500
+    if y > 0:
+        c = c[:-y]
+
     
     first = ('<tr class="govuk-table__row"><th scope="row" class="govuk-table__header">')
     second = ('</th>')
@@ -23,6 +27,5 @@ for row in data:
     end2 = ('</td>')
     se = ("],")
 
-    x = first + a + second + end + b + end2 + end + c + end2 + end + d + end2 + end + e + end2
-    txt.write(x)
-    print (x)
+    x = first + a + second + end + b + end2 + end + end2 + end + d + end2 + end + e + end2
+    txt.write(x + '\n')
