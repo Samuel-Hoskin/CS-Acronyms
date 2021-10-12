@@ -27,5 +27,5 @@ for row in data:
     end2 = ('</td>')
     se = ("],")
 
-    x = first + a + second + end + b + end2 + end + c + end2 + end + d + end2 + end + e + end2
+    x = first + a + second + end + b + end2 + end + end2 + end + d + end2 + end + e + end2
     txt.write(x + '\n')
