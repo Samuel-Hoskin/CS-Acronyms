@@ -28,7 +28,7 @@ jobs:
         run: python3 -m pip install -r requirements.txt
         working-directory: ./main
       - name: Generate index.html
-        run: python3 -m ./csv2html.py
+        run: python3 ./csv2html.py
         working-directory: ./main
       - name: Copy files to right location
         run: |
