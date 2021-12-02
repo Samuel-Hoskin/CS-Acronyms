@@ -124,17 +124,15 @@
 
 
         <tbody class="govuk-table__body">
-          <div>
-            {% for acronym in acronyms -%}
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">{{ acronym["Acronym"] }}</th>
-              <td class="govuk-table__cell">{{ acronym["Definition"] }}</td>
-              <td class="govuk-table__cell" style="max-width: 37.5%; overflow-y: auto;">{{ acronym["Meaning"]|truncate(500, True) }}</td>
-              <td class="govuk-table__cell">{{ acronym["Department"] }}</td>
-              <td class="govuk-table__cell">{{ acronym["Team/Area"] }}</td>
-            </tr>
-            {% endfor %}
-          </div>
+          {% for acronym in acronyms -%}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">{{ acronym["Acronym"] }}</th>
+            <td class="govuk-table__cell">{{ acronym["Definition"] }}</td>
+            <td class="govuk-table__cell" style="max-width: 37.5%; overflow-y: auto;">{{ acronym["Meaning"]|truncate(500, True) }}</td>
+            <td class="govuk-table__cell">{{ acronym["Department"] }}</td>
+            <td class="govuk-table__cell">{{ acronym["Team/Area"] }}</td>
+          </tr>
+          {% endfor %}
         </tbody>
       </table>
 
