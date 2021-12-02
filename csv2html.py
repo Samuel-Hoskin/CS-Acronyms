@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import pandas as pd
 import jinja2
 
@@ -7,6 +9,10 @@ data = data.where(pd.notnull(data), "")
 
 out = open("index.html", "w")
 
-out.write(jinja2.Environment(
+out.write(
+    jinja2.Environment(
         loader=jinja2.FileSystemLoader('.')
-    ).get_template("index.html.j2").render({'acronyms': data.to_dict('records')}))
+    ).get_template("index.html.j2").render({
+        'date': datetime.utcnow(),
+        'acronyms': data.to_dict('records')
+    }))
