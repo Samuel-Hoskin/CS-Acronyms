@@ -128,11 +128,11 @@
           <div>
             {% for acronym in acronyms -%}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">ZCH</th>
-              <td class="govuk-table__cell">Zero Carbon Housing</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell">DLUHC</td>
-              <td class="govuk-table__cell"></td>
+              <th scope="row" class="govuk-table__header">{{ acronym["Acronym"] }}</th>
+              <td class="govuk-table__cell">{{ acronym["Definition"] }}</td>
+              <td class="govuk-table__cell">{{ acronym["Meaning"]|truncate(500, True) }}</td>
+              <td class="govuk-table__cell">{{ acronym["Department"] }}</td>
+              <td class="govuk-table__cell">{{ acronym["Team/Area"] }}</td>
             </tr>
             {% endfor %}
           </div>
