@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install dependencies
-        run: python3 -m pip install requirements.txt
+        run: python3 -m pip install -r requirements.txt
         working-directory: ./main
       - name: Generate index.html
         run: python3 -m ./csv2html.py
