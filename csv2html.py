@@ -9,4 +9,4 @@ out = open("index.html", "w")
 
 out.write(jinja2.Environment(
         loader=jinja2.FileSystemLoader('.')
-    ).get_template("index.html.j2").render({'acronyms': data.items()}))
+    ).get_template("index.html.j2").render({'acronyms': data.to_dict('records'}))
