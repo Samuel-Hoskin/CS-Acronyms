@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" />📚<![endif]-->
+    <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if gt IE 8]><!--><link href="Acronyms%20Buster_files/unbranded.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,11 +25,7 @@
     <meta name="description" property="og:description" content="This site attempts to document all the acronyms used in order to improve everyone’s understanding in the workplace.">
   </head>
 
-  <body class="govuk-template__body  js-enabled" data-new-gr-c-s-check-loaded="8.876.0" data-gr-ext-installed=""><script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.14'><\/script>".replace("HOST", location.hostname));
-//]]></script><script async="" src="Acronyms%20Buster_files/browser-sync-client.js"></script>
-
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <body class="govuk-template__body  js-enabled">
 
 
 
@@ -81,10 +77,10 @@
         <div id="searchBox">
 
       </div>
-
+      </div>
       </div>
 
-      <div class="govuk-grid-row">
+      <div class="govuk-grid-row govuk-body">
       <table id="table_id" class="stripe govuk-table " style="table-layout: fixed; width: 100%;">
         <caption class="govuk-table__caption govuk-table__caption--m">The List</caption>
         <thead class="govuk-table__head">
@@ -166,34 +162,6 @@
  
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/r-2.2.9/datatables.min.js"></script>
 
-<script>
-$(document).ready( function () {
-    $('#table_id').DataTable({
-      responsive: {
-        details: false
-      },
-
-      "language": {
-            "search": "_INPUT_",            // Removes the 'Search' field label
-            "searchPlaceholder": "Search"   // Placeholder for the search box
-        },
-      columnDefs: [
-          { responsivePriority: 1, targets: 0 },
-          { responsivePriority: 2, targets: 1 },
-          { responsivePriority: 3, targets: 2 },
-          { responsivePriority: 4, targets: 3 }
-      ]
-    });
-} );
-$(document).ready(function() {
-  $('div.dataTables_filter input').addClass('govuk-input govuk-input--width-');
-  $('div.dataTables_filter').addClass('govuk-form-group');
-  $("div.dataTables_filter").removeClass("dataTables_filter");
-  $("#table_id_filter").detach().appendTo('#searchBox');
-
-
-  
-});
-</script>
+<script type="text/javascript" src="datatables.js"></script>
 
 </body></html>
