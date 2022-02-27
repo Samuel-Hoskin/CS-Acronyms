@@ -80,7 +80,7 @@
 
         <div class="govuk-form-group">
 
-          <input class="govuk-input govuk-input--width-" id="searchBox" name="width-5" type="text" onkeyup="searchClick()" placeholder="Search">
+          <input class="govuk-input govuk-input--width-" id="searchBox" name="width-5" type="text" onkeyup="searchClick()" placeholder="Search" onblur="gtag('event', 'search', {search_term: this.value});">
 
         </div>
 
