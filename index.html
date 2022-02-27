@@ -65,7 +65,7 @@
       </div>
       <div class="govuk-grid-column-one-third">
         <div class="govuk-inset-text">
-    Last Updated : 25-02-2022
+    Last Updated : 27-02-2022
   </div>
 
 
@@ -80,7 +80,7 @@
 
         <div class="govuk-form-group">
 
-          <input class="govuk-input govuk-input--width-" id="searchBox" name="width-5" type="text" onkeyup="searchClick()" placeholder="Search">
+          <input class="govuk-input govuk-input--width-" id="searchBox" name="width-5" type="text" onkeyup="searchClick()" placeholder="Search" onblur="gtag('event', 'search', {search_term: this.value});">
 
         </div>
 
