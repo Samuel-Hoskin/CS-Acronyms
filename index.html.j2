@@ -10,7 +10,7 @@
 
     <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if gt IE 8]><!--><link href="Acronyms%20Buster_files/unbranded.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL421ZZBE4"></script>
     <script>
@@ -25,11 +25,7 @@
     <meta name="description" property="og:description" content="This site attempts to document all the acronyms used in order to improve everyone’s understanding in the workplace.">
   </head>
 
-  <body class="govuk-template__body  js-enabled" data-new-gr-c-s-check-loaded="8.876.0" data-gr-ext-installed=""><script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.14'><\/script>".replace("HOST", location.hostname));
-//]]></script><script async="" src="Acronyms%20Buster_files/browser-sync-client.js"></script>
-
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <body class="govuk-template__body  js-enabled">
 
 
 
@@ -78,36 +74,26 @@
                 </ul>
         </div>
 
-        <div class="govuk-form-group">
 
-          <input class="govuk-input govuk-input--width-" id="searchBox" name="width-5" type="text" onkeyup="searchClick()" placeholder="Search" onblur="gtag('event', 'search', {search_term: this.value});">
+        <div id="searchBox">
 
-        </div>
 
       </div>
-
+      </div>
       </div>
 
-      <div class="govuk-grid-row">
-      <table class="govuk-table" style="table-layout: fixed; width: 100%;">
+      <div class="govuk-grid-row govuk-body">
+      <table id="table_id" class="stripe govuk-table " style="table-layout: fixed; width: 100%;">
         <caption class="govuk-table__caption govuk-table__caption--m">The List</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col"  style="max-width: 12.5%;" class="govuk-table__header">Acronym</th>
+            <th scope="col" class="govuk-table__header">Acronym</th>
             <th scope="col" class="govuk-table__header">Meaning</th>
             <th scope="col" class="govuk-table__header">Definition</th>
             <th scope="col" class="govuk-table__header">Department</th>
             <th scope="col" class="govuk-table__header">Team/Area</th>
           </tr>
         </thead>
-        <colgroup>
-          <col style="max-width: 12.5%;">
-          <col style="max-width: 25%;">
-          <col style="max-width: 37.5%;">
-          <col style="max-width: 12.5%;">
-          <col style="max-width: 12.5%;">
-
-        </colgroup>
 
 
         <tbody class="govuk-table__body">
@@ -115,11 +101,7 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">{{ acronym["Acronym"] }}</th>
             <td class="govuk-table__cell">{{ acronym["Definition"] }}</td>
-            <td class="govuk-table__cell">
-              <div style="max-height: 5em; overflow-y: auto">
-              {{ acronym["Meaning"]|truncate(500, True) }}
-              </div>
-            </td>
+            <td class="govuk-table__cell">{{ acronym["Meaning"]|truncate(500, True) }}</td>
             <td class="govuk-table__cell">{{ acronym["Department"] }}</td>
             <td class="govuk-table__cell">{{ acronym["Team/Area"] }}</td>
           </tr>
@@ -129,7 +111,9 @@
 
 
     </div>
+    <div class="govuk-grid-row">
     <p class="govuk-body">Acronym not here? Help populate the <a class="govuk-link" target="_blank" href="https://docs.google.com/spreadsheets/d/1S_plW5LSGM8JT4lvjLMw40nFeGgN3xOWEefVA8Y4xcc/edit?usp=sharing">list</a>, Someone else might know the meaning!</p>
+    </div>
     </div>
 
 </div>
@@ -175,15 +159,11 @@
 
 
     <!-- Javascript -->
-  <script src="Acronyms%20Buster_files/jquery-1.js"></script>
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/r-2.2.9/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/r-2.2.9/datatables.min.js"></script>
 
-  <script src="Acronyms%20Buster_files/all.js"></script>
-
-
-  <script src="Acronyms%20Buster_files/application.js"></script>
-
-
-  <script src="Acronyms%20Buster_files/auto-store-data.js"></script>
+<script type="text/javascript" src="datatables.js"></script>
 
 </body></html>
