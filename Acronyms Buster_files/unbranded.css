@@ -8339,20 +8339,5 @@ p + .govuk-heading-s,
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px){
-  .govuk-table__cell{
-    display: none;
-  }
 
-  .govuk-table__cell:first-of-type{
-    display: table-cell;
-  }
-
-  .govuk-table__header{
-    display: none;
-  }
-  .govuk-table__header:nth-child(1),.govuk-table__header:nth-child(2){
-    display: table-cell;
-  }
-}
 
