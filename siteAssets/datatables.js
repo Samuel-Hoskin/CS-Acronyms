@@ -24,6 +24,5 @@ $(document).ready(function() {
   $("div.dataTables_filter").removeClass("dataTables_filter");
   $("#table_id_filter").detach().appendTo('#searchBox');
   $("div.dataTables_length select").addClass("govuk-select");
-  $('div.govuk-form-group input').attr("onblur", "gtag('event', 'search', {search_term: this.value});");
-
-});
+  $('div.govuk-form-group input').attr("onblur", "gtag('event', 'search', {search_term: this.value}");
+} );
