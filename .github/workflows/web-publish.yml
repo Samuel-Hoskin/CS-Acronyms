@@ -33,7 +33,7 @@ jobs:
       - name: Copy files to right location
         run: |
           cp main/index.html public
-          cp -r "main/Acronyms Buster_files" public
+          cp -r "main/siteAssets" public
       - name: Commit back updated files to public branch
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
