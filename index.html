@@ -23,9 +23,9 @@
     <meta name="description" property="og:description" content="This site attempts to document all the acronyms used in order to improve everyone's understanding in the workplace.">
     <meta name="image" property='og:image' content='https://i.imgflip.com/5dm82z.jpg'/>
     <!--datatables-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/r-2.2.9/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/r-2.2.9/datatables.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
   </head>
 
   <body class="govuk-template__body  js-enabled">
@@ -83,11 +83,12 @@
                 </ul>
         </div>
 
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+          </h1>
+          <input class="govuk-input" id="acronym-search" name="acronymSearch" placeholder="Search" type="text">
+        </div>
 
-        <div id="searchBox">
-
-
-      </div>
       </div>
       </div>
 
