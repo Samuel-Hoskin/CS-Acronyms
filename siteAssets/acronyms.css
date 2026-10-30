@@ -1,0 +1,78 @@
+.acronym-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.acronym-filters .govuk-input,
+.acronym-filters .govuk-select {
+  min-width: 220px;
+  max-width: 100%;
+}
+
+.acronym-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.acronym-table th,
+.acronym-table td {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .acronym-table {
+    table-layout: auto;
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.acronym-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.acronym-pagination__item {
+  font-family: inherit;
+  font-size: 1rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 5px 12px;
+  color: #1d70b8;
+  background: #fff;
+  border: 2px solid #b1b4b6;
+  cursor: pointer;
+}
+
+.acronym-pagination__item:hover:not(:disabled) {
+  background: #f3f2f1;
+}
+
+.acronym-pagination__item:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  background: #fd0;
+  color: #0b0c0c;
+}
+
+.acronym-pagination__item[aria-current="page"] {
+  background: #1d70b8;
+  border-color: #1d70b8;
+  color: #fff;
+  cursor: default;
+}
+
+.acronym-pagination__item:disabled {
+  color: #505a5f;
+  cursor: not-allowed;
+}
+
+.acronym-pagination__gap {
+  padding: 0 5px;
+}
