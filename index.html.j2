@@ -13,10 +13,7 @@
     <!--Open Graph Settings-->
     <meta name="title" property="og:title" content="Civil Service Acronym Buster - Like Ghost Busters ... except for CS Acronyms!">
     <meta name="description" property="og:description" content="This site attempts to document all the acronyms used in order to improve everyone's understanding in the workplace.">
-    <!--datatables-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/r-2.2.9/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/r-2.2.9/datatables.min.js"></script>
-
+    <link href="siteAssets/acronyms.css" media="all" rel="stylesheet" type="text/css">
   </head>
 
   <body class="govuk-template__body  js-enabled">
@@ -75,15 +72,26 @@
         </div>
 
 
-        <div id="searchBox">
-
-
-      </div>
       </div>
       </div>
 
       <div class="govuk-grid-row govuk-body">
-      <table id="table_id" class="stripe govuk-table " style="table-layout: fixed; width: 100%;">
+      <noscript><p class="govuk-body">JavaScript is needed to search and browse the list of acronyms.</p></noscript>
+      <form id="filters" class="acronym-filters" role="search" onsubmit="return false">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="search">Search by acronym</label>
+          <input class="govuk-input" id="search" type="search" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="department">Department</label>
+          <select class="govuk-select" id="department"><option value="">All departments</option></select>
+        </div>
+        <div class="govuk-form-group">
+          <button type="button" class="govuk-button govuk-button--secondary" id="clear" data-module="govuk-button">Clear filters</button>
+        </div>
+      </form>
+      <p class="govuk-body" id="summary" role="status" aria-live="polite"></p>
+      <table id="table_id" class="govuk-table acronym-table">
         <caption class="govuk-table__caption govuk-table__caption--m">The List</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
@@ -96,18 +104,9 @@
         </thead>
 
 
-        <tbody class="govuk-table__body">
-          {% for acronym in acronyms -%}
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">{{ acronym["Acronym"] }}</th>
-            <td class="govuk-table__cell">{{ acronym["Definition"] }}</td>
-            <td class="govuk-table__cell">{{ acronym["Meaning"]|truncate(500, True) }}</td>
-            <td class="govuk-table__cell">{{ acronym["Department"] }}</td>
-            <td class="govuk-table__cell">{{ acronym["Team/Area"] }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
+        <tbody class="govuk-table__body" id="results"></tbody>
       </table>
+      <nav id="pagination" class="acronym-pagination" aria-label="Pagination"></nav>
 
 
     </div>
@@ -153,6 +152,7 @@
 
     <!-- Javascript -->
 
-<script type="text/javascript" src="siteAssets/datatables.js"></script>
+<script id="acronym-data" type="application/json">{{ acronyms_json|safe }}</script>
+<script src="siteAssets/acronyms.js"></script>
 
 </body></html>
